@@ -1,0 +1,57 @@
+.apropos-container {
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.apropos-content {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.accordeon {
+  padding: 10px;
+}
+
+.accordeon-item {
+  margin-bottom: 40px;
+  background-color: #ff6060;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accordeon-header {
+  background-color: #ff6060;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.accordeon-body {
+  background-color: white;
+  color: black;
+  border-radius: 0 0 10px 10px;
+  display: none;
+  line-height: 1.5;
+}
+
+.accordeon-item.active .accordeon-body {
+  display: block;
+  padding: 15px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.icon.open {
+  transform: rotate(180deg);
+}

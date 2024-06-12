@@ -1,0 +1,26 @@
+.D_404-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 80vh;
+}
+  
+.D_404-content h1 {
+    font-size: 150px;
+    color: #ff6060;
+    margin: 0;
+    margin-bottom: 60px;
+}
+  
+.D_404-content p {
+    font-size: 24px;
+    color: #ff6060;
+}
+  
+.D_404-content a {
+    font-size: 18px;
+    color: black;
+    text-decoration: underline;
+    margin-top: 60px;
+}
