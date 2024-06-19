@@ -1,4 +1,4 @@
-.D_404-content {
+.error-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,19 +6,19 @@
     height: 80vh;
 }
   
-.D_404-content h1 {
+.error-content h1 {
     font-size: 150px;
     color: #ff6060;
     margin: 0;
     margin-bottom: 60px;
 }
   
-.D_404-content p {
+.error-content p {
     font-size: 24px;
     color: #ff6060;
 }
   
-.D_404-content a {
+.error-content a {
     font-size: 18px;
     color: black;
     text-decoration: underline;
