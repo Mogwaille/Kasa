@@ -1,10 +1,12 @@
 // Import de divers composants
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logements from '../datas/Logements.json';
 import Collapse from '../components/Collapse';
+import Carrousel from '../components/Carrousel';
+import Profil from '../components/Profil';
 import '../styles/Logement.css';
-
 
 // Création des pages des logements
 function Logement() {
@@ -12,36 +14,17 @@ function Logement() {
   const logement = logements.find(logement => logement.id === id);
 
   if (!logement) {
-    return <div>Logement non trouvé</div>;
+    return <div className="error-content">
+              <h1>404</h1>
+              <p>Logement non trouvé</p>
+              <Link to="/">Retourner sur la page d'accueil</Link>
+           </div>;
   }
 
   return (
     <div className="logement-container">
-      <div className="logement-header">
-        <img src={logement.cover} alt={logement.title} />
-      </div>
-      <div className="logement-content">
-        <div className="logement-info">
-          <h1>{logement.title}</h1>
-          <p>{logement.location}</p>
-          <div className="logement-tags">
-            {logement.tags.map((tag, index) => (
-              <span key={index} className="tag">{tag}</span>
-            ))}
-          </div>
-        </div>
-        <div>
-          <div className="logement-host">
-            <p>{logement.host.name}</p>
-            <img className="host-picture" src={logement.host.picture} alt={logement.host.name} />
-          </div>
-          <div className="logement-rating">
-            {Array.from({ length: 5 }, (v, i) => (
-              <span key={i} className={`star ${i < logement.rating ? 'filled' : ''}`}>&#9733;</span>
-            ))}
-          </div>
-        </div>
-      </div>
+      <Carrousel />
+      <Profil logement={logement} />
       <div className="logement-collapse">
         <div className="collapse">
           <Collapse title="Description" content={<p>{logement.description}</p>} index={0} />

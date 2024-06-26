@@ -55,3 +55,34 @@
 .icon.open {
   transform: rotate(180deg);
 }
+
+/****** Media queries ***********/
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+.apropos-container {
+  padding: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.accordeon-item {
+  margin-bottom: 20px;
+}
+
+.accordeon-header {
+  padding: 15px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.accordeon-body {
+  width: 100%;
+}
+
+.accordeon {
+  margin-top: 10px;
+  margin-left: -30px;
+}
+
+}
