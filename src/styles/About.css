@@ -14,11 +14,16 @@
 }
 
 .accordeon-item {
+  margin-top: 20px;
   margin-bottom: 40px;
   background-color: #ff6060;
   color: white;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accordeon-item h2 {
+  margin: 0;
 }
 
 .accordeon-header {
@@ -36,7 +41,7 @@
 .accordeon-body {
   background-color: white;
   color: black;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
   display: none;
   line-height: 1.5;
 }
